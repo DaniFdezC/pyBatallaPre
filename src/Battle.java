@@ -25,10 +25,9 @@ public class Battle {
                 System.out.println("El guerrero falla su ataque");
             }
 
-            if (vampireHealth >= 0){
+            if (vampireHealth <= 0){
                 System.out.println("El guerrero ha derrotado al vampiro");
             } else {
-
                 double chanceVampireToAttackThisTurn = random.nextDouble();
 
                 if (chanceVampireToAttackThisTurn < vampireSuccessChance){
@@ -44,7 +43,7 @@ public class Battle {
             }
 
             System.out.println("Vida actual del guerrero: " + warriorHealth);
-            System.out.println("Vida actual del vampiro" + vampireHealth);
+            System.out.println("Vida actual del vampiro: " + vampireHealth);
             System.out.println();
             System.out.print("Presiona enter para continuar...");
             scanner.nextLine();
